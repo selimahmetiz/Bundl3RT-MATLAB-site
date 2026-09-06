@@ -88,28 +88,5 @@ The resulting correspondences are then used by a localized bundle adjustment ope
             Real-Time Aerial Mapping
 ```
 
----
-
-## Development & Deployment
-
-```bash
-npm install
-npm run dev      # local dev server
-npm run build    # builds a fully static site into dist/client
-```
-
-This site is a **static export**: `vite.config.ts` enables TanStack Start's
-`prerender` option, so `npm run build` renders every route to plain HTML/CSS/JS
-in `dist/client` — no server required to host it.
-
-### GitHub Pages
-
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the
-site and publishes `dist/client` via GitHub Pages. One-time setup:
-
-1. In the repo, go to **Settings → Pages** and set **Source** to
-   **GitHub Actions**.
-2. If this repo is a *project* page (e.g. `username.github.io/repo-name`),
-   the workflow already sets `BASE_PATH=/<repo-name>/` for you automatically.
-3. If this repo *is* your user page (named `username.github.io`), remove the
+--rname.github.io`), remove the
    `BASE_PATH` line from the workflow so the site builds for `/`.
